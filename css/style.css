@@ -1,0 +1,107 @@
+@charset "utf-8";
+body {
+  background-image: url(../images/background.jpg);
+ background-repeat: repeat;
+ background-color: rgba(255, 255, 255, 0.57);
+ background-blend-mode: screen;
+
+background-size: 500px;
+height: 500px;
+
+}
+/* ヘッダー */
+/* ナビゲーションメニュー */
+#header picture img{
+  width: 368px;
+}
+h1 picture .header__logo-sp{
+  width: 200px;
+}
+
+.header__inner{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5.12445%;
+  padding-left: 2%;
+  padding-right: 5%;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+.header_nav ul{
+  display: flex;
+  gap: 45px;
+  font-size: 16px;
+}
+.header_nav ul li{
+  line-height: 1.5;
+}
+/* ヘッダー1100ｐｘ以下はここから読み込み */
+@media screen and (max-width:1100px){
+  header picture img{
+  width: 150px;
+}
+}
+/* メインビジュアル */
+.main__visual{
+  /* height: 55.34407%; */
+}
+.main__visual img{
+  position: absolute;
+}
+
+/* コンセプト */
+#concept{
+  position: absolute;
+  
+}
+.concept__image{
+  width: 650px;
+}
+.concept__inner{
+  margin-top: 186px;
+  margin-left: 13.3967%;
+  position: absolute;
+
+}
+
+.concept__wrapper{
+  display: flex;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 764px;
+  margin-bottom: 140px;
+  align-items: center;
+  
+
+}
+#concept{
+  margin: 0 auto;
+}
+.concept__image-window img {
+  /* max-width: 1000px; */
+  /* position: absolute; */
+  /* top: 50px; */
+  margin-left: 51.83%;
+  /* margin-top: 83px; */
+width: 50%;
+}
+.concept__text{
+  margin-top: 127px;
+  font-size: 1.25rem;
+  font-style: Yu Gothic Pr6N R;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+}
+
+
+/* プロフィール */ 
+#profile h2 img{
+  width: 266px;
+}
+#profile h2 p{
+  font-size: 72px;
+}
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Okinaga Mami Portfolio site</title>
+
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./images/">
+
+  <!-- AdobeフォントYu Gothic ProN R 読み込み -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'pnz8nnf',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+  <!-- AdobeフォントGaramond Premier 読み込み -->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'pnz8nnf',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <!--  ナビゲーションメニュー -->
+  <header id="header">
+    <div class="header__inner">
+
+      <!-- ヘッダーロゴ -->
+      <h1>
+        <a href="index.html">
+          <picture>
+            <source srcset="./images/main-logo-sp.png" media="(max-width: 1100px)">
+            <img src="./images/main-logo.png" alt="design geniessen">
+          </picture>
+        </a>
+      </h1>
+      <nav class="header_nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#profiele">Profile</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#special-thanks">Special Thanks</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインビジュアル  -->
+  <div class="main__visual">
+    <div class="header__image_sky"> <img src="./images/top-image-sky-pc.jpg" alt=""></div>
+    <div class="header__image_top"><img src="./images/top-image-pc@1.5x.png" alt=""></div>
+  </div>
+
+  <!-- コンセプト -->
+  <section id="concept">
+    <div class="concept__wrapper">
+      <div class="concept__inner">
+        <h2 class="concept__image"><img src="./images/main-logo.png" alt="design geniessen">
+        </h2>
+        <p class="concept__text">楽しむ、味わうということをドイツ語で<br>
+          geniessenn ゲニッセンといいます。<br>
+          世界に色がついたようにわくわくして楽しくなる言葉です。<br>
+          建物に息吹を吹き込むように、<br>
+          デザインで表現して、そこから生まれる楽しさ、わくわく感を<br>
+          共有していきたいと願うのです。<br>
+        </p>
+      </div>
+      <div class="concept__image-window"> <img src="./images/window.png" alt="窓"></div>
+    </div>
+  </section>
+
+  <!-- プロフィール -->
+  <section id="profile">
+    <h2><img src="./images/logo.png" alt="">
+      <p>Profile</p>
+    </h2>
+  </section>
+
+
+
+</body>
+
+</html>
