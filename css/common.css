@@ -11,13 +11,14 @@ body {
  }
 
  /* ヘッダー */
-/* ナビゲーションメニュー */
-#header picture img{
+/* トップロゴ */
+header picture img{
   width: 368px;
 }
 h1 picture .header__logo-sp{
   width: 200px;
 }
+/* ナビゲーションメニュー */
 .header__inner{
   display: flex;
   justify-content: space-between;
@@ -26,27 +27,51 @@ h1 picture .header__logo-sp{
   padding-right: 3%;
   align-items: center;
   position: fixed;
+  top: 0;
   z-index: 100;
   width: 100%;
 }
 .header_nav ul{
   display: flex;
   gap: 40px;
-  
 }
 .header_nav ul li{
   line-height: 1.5;
   font-size: 16px;
-  color: white;
+  /* color: white; */
   font-weight: 250;
 }
 
-/* ヘッダー1100ｐｘ以下はここから読み込み */
+/*ヘッダーナビ
+フッターナビ
+1100ｐｘ以下はここから読み込み
+共通 */
 @media screen and (max-width:1100px){
-  #header picture img{
-    width: 150px;
-  }
-  }
+header picture img,
+footer h1 picture img{
+  width: 150px;
+}
+}
+
+  /* ロゴ　共通部分 */
+/* #profile h2, */
+h3{
+  position: relative;
+  margin-top: 280px;
+}
+/* #profile h2 img, */
+h3 img{
+  width: 266px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+/* #profile h2 p, */
+h3 p{
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
 
   /* フッター */
 footer .back-to-top_button{
@@ -54,18 +79,17 @@ footer .back-to-top_button{
   text-align: right;
   padding: 145px 25px 160px 0;
 }
-/* ヘッダー */
-/* ナビゲーションメニュー */
-footer picture img{
+
+/* フッター　ナビゲーションメニュー */
+footer h1 img{
   width: 368px;
 }
-footer picture .footer__logo-sp{
+footer h1 picture .footer__logo-sp{
   width: 200px;
 }
 footer .footer__inner{
   display: flex;
   justify-content: space-between;
-  /* margin-top: 5.12445%; */
   width: 100%;
   padding-left: 2%;
   padding-right: 3%;
@@ -73,8 +97,6 @@ footer .footer__inner{
   align-items: center;
   /* position: fixed; */
   z-index: 100;
-
-
 }
 footer nav ul{
   display: flex;
@@ -84,19 +106,11 @@ footer nav ul{
 footer nav ul li{
   line-height: 1.5;
 }
-
-/* ヘッダー1100ｐｘ以下はここから読み込み */
-@media screen and (max-width:1100px){
-footer picture img{
-  width: 150px;
-}
-}
 footer .footer__img{
-  /* display: block; */
   width: 100%;
   position: relative;
 }
-footer .footer__img p{
+footer .footer__img .copyright{
   position: absolute;
   right: 0;
   left: 0;
@@ -106,3 +120,40 @@ footer .footer__img p{
   align-items: center;
   font-size: 10px;
 }
+footer .footer__sp-logo{
+  display: none;
+}
+/* フッター767px以下はここから読み込み */
+@media screen and (max-width:767px){
+
+footer h1{
+    display: none;
+  }
+  footer .footer__inner{
+  width: 100%;
+  background-color: #e5e1e1;
+  margin-bottom: 0;
+  padding: 0 60px;
+  }
+  footer .footer__inner ul{
+    display: block;
+    width: 100%;
+    margin-bottom: 0;
+    /* padding-left: 17%; */
+    padding: 40px 0 40px 17%;
+  
+  }
+  footer .footer__inner ul li{
+    padding: 22px 0;
+    font-size: 17px;
+  }
+  .footer_nav{
+    position: relative;
+  }
+  footer .footer__sp-logo img{
+    display: block;
+    width: 150px;
+    position: absolute;
+    top: 0;
+  }
+  }

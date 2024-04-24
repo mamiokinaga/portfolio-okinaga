@@ -39,7 +39,7 @@
 
 <body>
   <!-- ヘッダー -->
-  <!--  ナビゲーションメニュー -->
+
   <header id="header">
     <div class="header__inner">
 
@@ -52,6 +52,7 @@
           </picture>
         </a>
       </h1>
+      <!--  ナビゲーションメニュー -->
       <nav class="header_nav">
         <ul>
           <li><a href="./index.html">Home</a></li>
@@ -66,7 +67,7 @@
   </header>
 
   <!-- メインビジュアル  -->
-  <div class="main__visual">
+  <div class="main-visual">
     <div class="header__image_sky"><img src="./images/top-image-sky-pc@2x.png" alt=""></div>
     <!-- <div class="header__image_top"><img src="./images/top-image-pc@1.5x.png" alt=""></div> -->
   </div>
@@ -91,9 +92,9 @@
 
   <!-- プロフィール -->
   <section id="profile">
-    <h2><img src="./images/logo.png" alt="">
+    <h3><img src="./images/logo.png" alt="">
       <p>Profile</p>
-    </h2>
+    </h3>
     <div class="profile__wrapper">
       <div class="portrait__wrapper">
         <div class="portrait__inner">
@@ -111,9 +112,9 @@
 
   <!-- works -->
   <section id="works">
-    <h2><img src="./images/logo.png" alt="">
+    <h3><img src="./images/logo.png" alt="">
       <p>Works</p>
-    </h2>
+    </h3>
     <ul>
       <li>
         <a href="hairsalon.html">
@@ -194,14 +195,20 @@
           <li><a href="#special-thanks">Special Thanks</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="footer__sp-logo"><img src="./images/main-logo-sp.png" alt="ロゴ"></div>
       </nav>
 
     </div>
     <!-- フッター画像 -->
     <div class="footer__img">
-      <p>copyright 2024 OKINAGA MAMI</p>
-      <img src="./images/footer@2x-100.jpg" alt="">
+      <p class="copyright">copyright 2024 OKINAGA MAMI</p>
+      <picture>
+        <source srcset="./images/footer_sp_1@2x-100.jpg" media="(max-width: 767px)">
+        <img src="./images/footer@2x-100.jpg" alt="">
+      </picture>
+
     </div>
+
 
 
 
