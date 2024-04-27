@@ -6,7 +6,7 @@ body {
   background-repeat: repeat;
   background-color: rgba(255, 255, 255, 0.57);
   background-blend-mode: screen;
-  /* background-size: 100%; */
+  background-size: 100%;
   background-size: 700px;
  }
 
@@ -23,8 +23,9 @@ h1 picture .header__logo-sp{
   display: flex;
   justify-content: space-between;
   margin-top: 5.12445%;
-  padding-left: 2%;
-  padding-right: 3%;
+  /* padding-left: 2%;
+  padding-right: 3%; */
+  padding: 16px 3% 13px 2%;
   align-items: center;
   position: fixed;
   top: 0;
@@ -35,12 +36,36 @@ h1 picture .header__logo-sp{
   display: flex;
   gap: 40px;
 }
+.header .header_nav_main-page{
+  color: white;
+}
 .header_nav ul li{
   line-height: 1.5;
   font-size: 16px;
   /* color: white; */
   font-weight: 250;
 }
+/* ナビゲーションメニューの背景に色を付ける */
+header .change-color-point{
+  position: absolute;
+  top: 120px;
+}
+header .change-color{
+  background-color: #c7c5c4; 
+  opacity: 0.75;
+  transition: 0.3s;
+}
+header .change-color_works{
+  background-color: white; 
+  opacity: 0.85;
+  transition: 0.3s;
+}
+#header .hamburger,
+#header .header_nav-sp{
+  display: none;
+}
+
+
 
 /*ヘッダーナビ
 フッターナビ
@@ -51,33 +76,100 @@ header picture img,
 footer h1 picture img{
   width: 150px;
 }
+/* ハンバーガーメニュー */
+#header .header_nav{
+  display: none;
+}
+#header .hamburger{
+  display: block;
+  width: 32px;
+  height: 28px;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 9999;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#header .hamburger span{
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  background-color: white;
+  top: 16px;
+  transition: 0.5s;
+}
+#header .hamburger span::before{
+  position: absolute;
+  content: "";
+  width: 23px;
+  height: 2px;
+  right: 0;
+  background-color: white;
+  bottom: -12px;
+  transition: 0.5s;
+}
+#header .hamburger span::after{
+  position: absolute;
+  content: "";
+  width: 32px;
+  height: 2px;
+  right: 0;
+  background-color: white;
+  bottom: 12px;
+  transition: 0.5s;
+}
+#header .open span{
+  background-color: transparent;
+}
+.open span::before{
+  transform: rotate(45deg);
+  top: 0;
+}
+.open span::after{
+  transform: rotate(-45deg);
+  bottom: 0;
 }
 
+
+
   /* ロゴ　共通部分 */
-/* #profile h2, */
+/* #profile h3, */
 h3{
   position: relative;
   margin-top: 280px;
 }
-/* #profile h2 img, */
+/* #profile h3 img, */
 h3 img{
   width: 266px;
   position: absolute;
   bottom: 0;
   z-index: -1;
 }
-/* #profile h2 p, */
+/* #profile h3 p, */
 h3 p{
   font-size: 4.5rem;
   font-weight: 400;
   margin-bottom: 40px;
 }
+/* ロゴ　共通部分767px以下はここから読み込み */
+@media screen and (max-width: 767px){
+  h3 img{
+  width:  170px;
+  }
+  h3 p{
+    font-size: 47px;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+}
+
 
   /* フッター */
 footer .back-to-top_button{
-  min-width: 100%;
   text-align: right;
-  padding: 145px 25px 160px 0;
+  padding: 10% 25px 10% 0;
 }
 
 /* フッター　ナビゲーションメニュー */
@@ -95,7 +187,6 @@ footer .footer__inner{
   padding-right: 3%;
   margin-bottom: 70px;
   align-items: center;
-  /* position: fixed; */
   z-index: 100;
 }
 footer nav ul{
@@ -131,9 +222,9 @@ footer h1{
   }
   footer .footer__inner{
   width: 100%;
-  background-color: #e5e1e1;
+  /* background-color: #e5e1e1; */
   margin-bottom: 0;
-  padding: 0 60px;
+  padding: 0 0 0 10%;
   }
   footer .footer__inner ul{
     display: block;
@@ -155,5 +246,9 @@ footer h1{
     width: 150px;
     position: absolute;
     top: 0;
+  }
+  footer .back-to-top_button{
+    text-align: right;
+    padding: 60px 30px 30px 0;
   }
   }

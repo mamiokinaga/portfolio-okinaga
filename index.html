@@ -7,8 +7,8 @@
   <title>Okinaga Mami Portfolio site</title>
 
   <link rel="stylesheet" href="./css/reset.css">
-  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./images/">
 
   <!-- AdobeフォントYu Gothic ProN R 読み込み -->
@@ -35,6 +35,8 @@
     })(document);
   </script>
 
+  <!-- jquery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -64,14 +66,33 @@
         </ul>
       </nav>
     </div>
+    <!--　ハンバーガーメニュー -->
+    <div class="hamburger">
+      <span></span>
+    </div>
+    <nav class="header_nav-sp">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#special-thanks">Special Thanks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!--ナビゲーションメニューの背景に色を付ける  -->
+    <div class="change-color-point">ちぇんじ</div>
   </header>
+
 
   <!-- メインビジュアル  -->
   <div class="main-visual">
-    <div class="header__image_sky"><img src="./images/top-image-sky-pc@2x.png" alt=""></div>
-    <!-- <div class="header__image_top"><img src="./images/top-image-pc@1.5x.png" alt=""></div> -->
+    <picture>
+      <source srcset="./images/top-image_sp_sky.png" media="(max-width: 767px)">
+      <div class="header__image_sky"><img src="./images/top-image-sky-pc@2x.png" alt=""></div>
+      <!-- <div class="header__image_top"><img src="./images/top-image-pc@1.5x.png" alt=""></div> -->
+    </picture>
   </div>
-
   <!-- コンセプト -->
   <section id="concept">
     <div class="concept__wrapper">
@@ -117,43 +138,43 @@
     </h3>
     <ul>
       <li>
-        <a href="hairsalon.html">
+        <a href="./works/hairsalon.html">
           <p class="works-hairsalon"><img src="./images/hair-salon-mockup@2x.png" alt=""></p>
         </a>
-        <p class="title"><a href="hairsalon.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/hairsalon.html">Hair Salon LP (架空)</a></p>
       </li>
       <li class="works__burger-wrapper">
-        <a href="burger-banner.html">
+        <a href="./works/burger-banner.html">
           <p class="works__item-burger">
             <img src="./images/burger_pop.jpg">
             <img src="./images/burger_koukyuu.jpg" alt="">
           </p>
         </a>
-        <p class="title"><a href="hairsalon.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/burger-banner.html">Hair Salon LP (架空)</a></p>
       </li>
       <li>
-        <a href="sp-banner.html">
+        <a href="./works/sp-banner.html">
           <p class="works__spring-sale-banner"><img src="./images/spring-sale.jpg" alt=""></p>
         </a>
-        <p class="title"><a href="hairsalon.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/sp-banner.html">Hair Salon LP (架空)</a></p>
       </li>
       <li>
-        <a href="workers.html">
+        <a href="./works/workers.html">
           <p class="works__item-workers"><img src="./images/workers-mockup@2x.png" alt=""></p>
         </a>
-        <p class="title"><a href="hairsalon.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/workers.html">Hair Salon LP (架空)</a></p>
       </li>
       <li>
-        <a href="trip-banner.html">
+        <a href="./works/trrip-banner.html">
           <p class="works__trip-banner"><img src="./images/trip.jpg" alt=""></p>
         </a>
-        <p class="title"><a href="trrip-banner.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/trrip-banner.html">Hair Salon LP (架空)</a></p>
       </li>
       <li>
-        <a href="cafe.html">
+        <a href="./works/cafe.html">
           <p class="works__cafe"><img src="./images/design-cafe-mockup@2x.png" alt=""></p>
         </a>
-        <p class="title"><a href="cafe.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/cafe.html">Hair Salon LP (架空)</a></p>
       </li>
     </ul>
   </section>
@@ -209,10 +230,24 @@
 
     </div>
 
-
-
-
   </footer>
+  <script>
+    // jquery入ってるか確認！
+    $(function () {
+      alert('jQuery is ready.')
+    });
+
+    // ヘッダー背景に色を付ける
+    $(function () {
+      $(window).on('scroll', function () {
+        if ($('.change-color-point').height() < $(this).scrollTop()) {
+          $('.header__inner').addClass('change-color');
+        } else {
+          $('.header__inner').removeClass('change-color');
+        }
+      });
+    });
+  </script>
 
 </body>
 

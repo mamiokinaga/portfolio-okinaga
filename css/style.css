@@ -2,12 +2,12 @@
 
 /* 背景　バックグラウンドイメージ */
 body {
- background-image: url(../images/background.jpg);
+ /* background-image: url(../images/background.jpg);
  background-repeat: repeat;
  background-color: rgba(255, 255, 255, 0.57);
  background-blend-mode: screen;
  background-size: 700px;
-}
+} */
 
 
 /*全体 共通部分 */
@@ -20,7 +20,20 @@ body {
   margin: 0 auto;
   padding: 0 25px;
 }
+@media screen and (max-width: 767px){
+#profile,
+#works,
+#special-thanks{
+  margin: 0 auto;
+  padding: 0 30px;
+}
+#concept{
+  margin: 0auto;
+  padding: 0 0 0 30px;
+}
 
+
+}
 /* ロゴ　共通部分 */
 #profile h2,
 #works h2{
@@ -40,17 +53,21 @@ body {
   font-weight: 400;
   margin-bottom: 40px;
 }
+/* ロゴ　共通部分767px以下はここから読み込み */
+@media screen and (max-width: 767px){
+
+}
 
 /* ヘッダー */
 /* ナビゲーションメニュー */
 header picture img{
-  width: 368px;
+  /* width: 368px; */
 }
 h1 picture .header__logo-sp{
-  width: 200px;
+  /* width: 200px; */
 }
 .header__inner{
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   margin-top: 5.12445%;
   padding-left: 2%;
@@ -58,23 +75,23 @@ h1 picture .header__logo-sp{
   align-items: center;
   position: fixed;
   z-index: 100;
-  width: 100%;
+  width: 100%; */
 }
 header_nav ul{
-  display: flex;
+  /* display: flex;
   gap: 40px;
-  font-size: 16px;
+  font-size: 16px; */
 }
 header_nav ul li{
-  line-height: 1.5;
+  /* line-height: 1.5; */
 }
 
 /* ヘッダー1100ｐｘ以下はここから読み込み */
-@media screen and (max-width:1100px){
+/* @media screen and (max-width:1100px){
 header picture img{
   width: 150px;
 }
-}
+} */
 /* メインビジュアル */
 
 /* コンセプト */
@@ -82,7 +99,9 @@ header picture img{
   margin: 0 auto;
 }
 .concept__image{
-  width: 650px;
+  width: 65%;
+  min-width: 290px;
+  padding-top: 6%;
 }
 .concept__wrapper{
   display: flex;
@@ -105,9 +124,32 @@ header picture img{
 .concept__text{
   margin-top: 127px;
   font-size: 1.25rem;
-  font-style: Yu Gothic Pr6N R;
   line-height: 2.1;
   letter-spacing: 0.04em;
+}
+/* コンセプト767px以下はここから読み込み */
+@media screen and (max-width:767px){
+  /* .concept__image{
+    width:270px;
+  } */
+  .concept__inner{
+  display: block;
+  position: relative;
+}
+  .concept__image-window{
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+  .concept__image-window{
+    min-width: 240px;
+}
+  .concept__text{
+  font-size: 15px;
+  line-height: 2.1;
+  letter-spacing: 0.04em;
+  padding: 0 33px 0 0;
+  }
 }
 
 
@@ -117,7 +159,6 @@ header picture img{
   margin: 0 auto;
   padding: 0 30px;
 }
-
 .portrait__wrapper{
   position: relative;
   display: flex;
@@ -125,20 +166,16 @@ header picture img{
   justify-content: space-between;
   gap: 4%;
   max-width: 1000px;
-
 }
-.portrait__wrapper{
-}
+#profile .portrait__inner
 
 .frame {
   position: absolute;
   width: 44%;
-  
 }
 .frame img{
   width: 400px;
 }
-
 .portrait{
   margin-left: 16px;
 }
@@ -155,6 +192,20 @@ header picture img{
 #profile .text{
   font-size: 1.0625rem;
   line-height: 2.117;
+}
+/* プロフィール767px以下はここから読み込み */
+@media screen and (max-width: 767px){
+.portrait__wrapper{
+    display: block;
+}
+.text__wrapper .name{
+  padding-top: 35px;
+  margin-bottom: 40px;
+}
+#profile .text{
+  padding: 0 30 0 30;
+  font-size: 15px;
+}
 }
 
 
@@ -201,14 +252,13 @@ header picture img{
 }
 
 /* burger banner */
-.works__item-burger {
+#works .works__item-burger {
   display: flex;
   align-items: center;
-  padding: 4%;
+  padding: 2%;
   gap: 1.5%;
-
 }
-.works__item-burger img{
+#works .works__item-burger img{
   height: 61%;
 }
 /* spring sale */
@@ -220,7 +270,24 @@ header picture img{
 #works .works__trip-banner img{
   width: 50%;
   margin-top: 5%;
-  }
+}
+/* works max-width767px以下はここから読み込み */
+@media screen and (max-width: 767px){
+#works ul{
+  width: 100%;
+  margin: 0 auto;
+}
+  #works ul li{
+  display: block;
+  align-items: center;
+  margin-bottom: 78px;
+} 
+
+
+} 
+}
+
+
 
   /* special thanks */
 #special-thanks .special-thanks__wrapper img{
@@ -230,7 +297,7 @@ box-shadow: 2.5px 2.5px 10px #e6e6e6;
 }
 #special-thanks .special-thanks__wrapper{
   position: relative;
-  align-items: center;
+  text-align: center;
 }
 #special-thanks h2{
   position: absolute;
@@ -270,8 +337,6 @@ footer picture .footer__logo-sp{
   margin-bottom: 70px;
   align-items: center;
   z-index: 100; */
-
-
 }
 /* footer nav ul{
   display: flex;
