@@ -42,7 +42,7 @@ h1 picture .header__logo-sp{
 .header_nav ul li{
   line-height: 1.5;
   font-size: 16px;
-  /* color: white; */
+  color: white;
   font-weight: 250;
 }
 /* ナビゲーションメニューの背景に色を付ける */
@@ -53,13 +53,14 @@ header .change-color-point{
 header .change-color{
   background-color: #c7c5c4; 
   opacity: 0.75;
-  transition: 0.3s;
+  transition: 2s;
 }
 header .change-color_works{
   background-color: white; 
   opacity: 0.85;
-  transition: 0.3s;
+  transition: 2s;
 }
+/* ハンバーガーメニュー */
 #header .hamburger,
 #header .header_nav-sp{
   display: none;
@@ -131,7 +132,7 @@ footer h1 picture img{
   transform: rotate(-45deg);
   bottom: 0;
 }
-
+}
 
 
   /* ロゴ　共通部分 */
