@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Okinaga Mami Portfolio site</title>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -35,6 +36,10 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
+
+  <!-- jquery読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -64,16 +69,16 @@
       </nav>
     </div>
     <!--ナビゲーションメニューの背景に色を付ける  -->
-    <div class="change-color-point">ちぇんじ</div>
+    <div class="change-color-point"></div>
   </header>
   <!-- works ロゴ -->
   <section id="main-visual">
     <h2><img src="../images/logo.png" alt="">
-      <p>Works</p>
+      <p data-aos="fade-right" data-aos-duration="3000">Works</p>
     </h2>
     <!-- works トップ画像-->
-    <p class="title">カフェサイト 模写（コーディング）</p>
-    <div class="img-wrapper">
+    <p class="title" data-aos="fade-right" data-aos-duration="3000">カフェサイト 模写（コーディング）</p>
+    <div class="img-wrapper" data-aos="fade-up" data-aos-duration="3000">
       <p class="img-wrapper__mockup">
         <img src="../images/design-cafe-mockup@2x.png" alt="ヘアーサロンモックアップ">
       </p>
@@ -140,7 +145,21 @@
 
   </footer>
 
+  <script>
 
+    AOS.init();
+
+    // ヘッダー背景に色を付ける
+    $(function () {
+      $(window).on('scroll', function () {
+        if ($('.change-color-point').height() < $(this).scrollTop()) {
+          $('.header__inner').addClass('change-color_works');
+        } else {
+          $('.header__inner').removeClass('change-color_works');
+        }
+      });
+    });
+  </script>
 
 </body>
 

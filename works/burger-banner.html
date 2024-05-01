@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Okinaga Mami Portfolio site</title>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/common.css">
@@ -37,6 +38,7 @@
   </script>
   <!-- jquery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -66,16 +68,16 @@
       </nav>
     </div>
     <!--ナビゲーションメニューの背景に色を付ける  -->
-    <div class="change-color-point">ちぇんじ</div>
+    <div class="change-color-point"></div>
   </header>
   <!-- works ロゴ -->
   <section id="main-visual">
     <h2><img src="../images/logo.png" alt="">
-      <p>Works</p>
+      <p data-aos="fade-right" data-aos-duration="3000">Works</p>
     </h2>
     <!-- works トップ画像-->
-    <p class="title">WEB広告用バナーデザイン模写</p>
-    <div class="img-wrapper-burger">
+    <p class="title" data-aos="fade-right" data-aos-duration="3000">WEB広告用バナーデザイン模写</p>
+    <div class="img-wrapper-burger" data-aos="fade-up" data-aos-duration="3000">
       <div class="img-inner-burger">
         <p class="burger-pop"><img src="../images/burger_pop.jpg" alt="バーガーポップ"></p>
         <p class="burger-koukyuu"><img src="../images/burger_koukyuu.jpg" alt="バーガー高級"></p>
@@ -163,6 +165,7 @@
 
   </footer>
   <script>
+    AOS.init();
     // jquery入ってるか確認！
     // $(function () {
     //   alert('jQuery is ready.')
@@ -179,11 +182,11 @@
       });
     });
 
-    $(function () {
-      // $(".img-wrapper-burger").hide(3000);
-      $(".img-wrapper-burger").hide();
-      $(".img-wrapper-burger").show(1600);
-    });
+    // $(function () {
+    //   // $(".img-wrapper-burger").hide(3000);
+    //   $(".img-wrapper-burger").hide();
+    //   $(".img-wrapper-burger").show(1600);
+    // });
     $(function () {
       $(".hamburger").on("click", function () {
         $(".hamburger").toggleClass("open");

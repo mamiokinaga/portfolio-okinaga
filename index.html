@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Okinaga Mami Portfolio site</title>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/common.css">
@@ -37,6 +38,7 @@
 
   <!-- jquery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -81,19 +83,19 @@
       </ul>
     </nav>
     <!--ナビゲーションメニューの背景に色を付ける  -->
-    <div class="change-color-point">ちぇんじ</div>
+    <div class="change-color-point"></div>
   </header>
 
 
   <!-- メインビジュアル  -->
   <div class="main-visual">
     <picture>
-      <source srcset="./images/top-image_
-      sp_sky.png" media="(max-width: 767px)">
+      <source srcset="./images/top-image_sp_sky.png" media="(max-width: 767px)">
       <div class="header__image_sky"><img src="./images/top-image-sky-pc@2x.png" alt=""></div>
       <!-- <div class="header__image_top"><img src="./images/top-image-pc@1.5x.png" alt=""></div> -->
     </picture>
   </div>
+
   <!-- コンセプト -->
   <section id="concept">
     <div class="concept__wrapper">
@@ -115,7 +117,7 @@
   <!-- プロフィール -->
   <section id="profile">
     <h3><img src="./images/logo.png" alt="">
-      <p>Profile</p>
+      <p data-aos="fade-right" data-aos-duration="3000">Profile</p>
     </h3>
     <div class="profile__wrapper">
       <div class="portrait__wrapper">
@@ -124,7 +126,7 @@
           <p class="portrait"><img src="./images/portlate.jpg" alt=""></p>
         </div>
         <div class="text__wrapper">
-          <p class="name">OKINAGA MAMI</p>
+          <p class="name" data-aos="fade-up" data-aos-duration="3000">OKINAGA MAMI</p>
           <p class="text">農業に従事、店販用のポップを作成し、デザインについて調べるうちに<br>ウェブデザインに興味を 持ち、２０２４年よりデザスタでデザインと、<br>
             コーディングを学ぶ。</p>
         </div>
@@ -135,20 +137,19 @@
   <!-- works -->
   <section id="works">
     <h3><img src="./images/logo.png" alt="">
-      <p>Works</p>
+      <p data-aos="fade-right" data-aos-duration="3000">Works</p>
     </h3>
     <ul>
       <li>
         <a href="./works/hairsalon.html">
-          <p class="works-hairsalon"><img src="./images/hair-salon-mockup@2x.png" alt=""></p>
+          <p class="works__hairsalon"><img src="./images/hair-salon-mockup@2x.png" alt=""></p>
         </a>
         <p class="title"><a href="./works/hairsalon.html">Hair Salon LP (架空)</a></p>
       </li>
-      <li class="works__burger-wrapper">
+      <li>
         <a href="./works/burger-banner.html">
           <p class="works__item-burger">
-            <img src="./images/burger_pop.jpg">
-            <img src="./images/burger_koukyuu.jpg" alt="">
+            <img src="./images/burger.png" alt="">
           </p>
         </a>
         <p class="title"><a href="./works/burger-banner.html">Hair Salon LP (架空)</a></p>
@@ -182,12 +183,35 @@
 
   <!-- スペシャルサンクス -->
   <section id="special-thanks">
-    <h2>
-      <img src="./images/logo.png" alt="">
-      <p>Special Thanks!</p>
-    </h2>
     <div class="special-thanks__wrapper">
-      <img src="./images/specialthanks.jpg" alt="">
+      <h2 data-aos="fade-right" data-aos-duration="3000">
+        <img src="./images/logo.png" alt="">
+        <p>Special Thanks!</p>
+      </h2>
+
+
+      <p class="special-thanks__to">To</p>
+      <div class="special-thanks__text">
+        <ul>
+          <li>デザスタ代表 越智圭吾さん
+            <p class="instagram-url"><a href=""> instagram <span>keigo_ochi</span></a></p>
+          </li>
+          <li>デザイン講師 designer 川田先生
+            <p class="instagram-url"><a href=""> instagram <span>kawada_design</span></a></p>
+          </li>
+          <li>コーディング講師 frontengeneer ユキノ先生
+            <p class="instagram-url"><a href=""> instagram <span>front_engineer_ykn</span></a></p>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <p class special-thanks_image>
+      <picture>
+        <source srcset="./images/special-thanks_sp@2x-100.jpg" media="(max-width: 767px)" sizes="150px">
+        <img src="./images/specialthanks.jpg" alt="">
+      </picture>
+    </p>
     </div>
   </section>
 
@@ -233,10 +257,11 @@
 
   </footer>
   <script>
+    AOS.init();
     // jquery入ってるか確認！
-    $(function () {
-      alert('jQuery is ready.')
-    });
+    // $(function () {
+    //   alert('jQuery is ready.')
+    // });
 
     // ヘッダー背景に色を付ける
     $(function () {

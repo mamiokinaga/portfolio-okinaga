@@ -22,28 +22,27 @@ h1 picture .header__logo-sp{
 .header__inner{
   display: flex;
   justify-content: space-between;
-  margin-top: 5.12445%;
-  /* padding-left: 2%;
-  padding-right: 3%; */
-  padding: 16px 3% 13px 2%;
+  width: 100%;
+  padding: 40px 3% 13px 2%;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 100;
-  width: 100%;
+
 }
 .header_nav ul{
   display: flex;
   gap: 40px;
 }
-.header .header_nav_main-page{
-  color: white;
-}
+
 .header_nav ul li{
   line-height: 1.5;
   font-size: 16px;
   color: white;
   font-weight: 250;
+}
+.header_nav .gnavi li{
+  color: #2d2d2d;
 }
 /* ナビゲーションメニューの背景に色を付ける */
 header .change-color-point{
@@ -51,7 +50,7 @@ header .change-color-point{
   top: 120px;
 }
 header .change-color{
-  background-color: #c7c5c4; 
+  background-color: #cccccc; 
   opacity: 0.75;
   transition: 2s;
 }
@@ -60,6 +59,8 @@ header .change-color_works{
   opacity: 0.85;
   transition: 2s;
 }
+
+
 /* ハンバーガーメニュー */
 #header .hamburger,
 #header .header_nav-sp{
@@ -135,7 +136,7 @@ footer h1 picture img{
 }
 
 
-  /* ロゴ　共通部分 */
+/* ロゴ 共通部分 */
 /* #profile h3, */
 h3{
   position: relative;
@@ -154,23 +155,23 @@ h3 p{
   font-weight: 400;
   margin-bottom: 40px;
 }
-/* ロゴ　共通部分767px以下はここから読み込み */
+/* ロゴ 共通部分767px以下はここから読み込み */
 @media screen and (max-width: 767px){
   h3 img{
   width:  170px;
-  }
+}
   h3 p{
-    font-size: 47px;
-    font-weight: 400;
-    margin-bottom: 40px;
-  }
+  font-size: 47px;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
 }
 
 
   /* フッター */
 footer .back-to-top_button{
   text-align: right;
-  padding: 10% 25px 10% 0;
+  padding: 10% 25px 17% 0;
 }
 
 /* フッター　ナビゲーションメニュー */
@@ -215,41 +216,31 @@ footer .footer__img .copyright{
 footer .footer__sp-logo{
   display: none;
 }
+
+
 /* フッター767px以下はここから読み込み */
 @media screen and (max-width:767px){
-
-footer h1{
-    display: none;
-  }
-  footer .footer__inner{
-  width: 100%;
-  /* background-color: #e5e1e1; */
-  margin-bottom: 0;
-  padding: 0 0 0 10%;
-  }
-  footer .footer__inner ul{
-    display: block;
-    width: 100%;
-    margin-bottom: 0;
-    /* padding-left: 17%; */
-    padding: 40px 0 40px 17%;
   
-  }
-  footer .footer__inner ul li{
-    padding: 22px 0;
-    font-size: 17px;
-  }
-  .footer_nav{
-    position: relative;
-  }
-  footer .footer__sp-logo img{
+ footer .back-to-top_button{
+    padding: 9%, 20px;
+ }
+  footer .footer__inner{
     display: block;
-    width: 150px;
-    position: absolute;
-    top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
   }
-  footer .back-to-top_button{
-    text-align: right;
-    padding: 60px 30px 30px 0;
+  footer nav ul li{
+    padding-bottom: 26px;
   }
+  footer nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 8%;
   }
+  footer h1{
+    text-align: center;
+    padding-bottom: 45px;
+    
+  }
+}

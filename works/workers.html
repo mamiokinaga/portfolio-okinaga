@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Okinaga Mami Portfolio site</title>
 
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/style.css">
@@ -38,6 +39,7 @@
 
   <!-- jquery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
@@ -70,11 +72,11 @@
   <!-- works ロゴ -->
   <section id="main-visual">
     <h2><img src="../images/logo.png" alt="">
-      <p>Works</p>
+      <p data-aos="fade-right" data-aos-duration="3000">Works</p>
     </h2>
     <!-- works トップ画像-->
-    <p class="title">Hair Salon LP（架空）</p>
-    <div class="img-wrapper">
+    <p class="title" data-aos="fade-right" data-aos-duration="3000">Hair Salon LP（架空）</p>
+    <div class="img-wrapper" data-aos="fade-up" data-aos-duration="3000">
       <p class="img-wrapper__mockup"><img src="../images/workers-mockup@2x.png" alt="ヘアーサロンモックアップ"></p>
     </div>
     <!-- works 内容説明文 -->
@@ -147,6 +149,14 @@
 
   </footer>
 
+  <script>
+    AOS.init();
+
+    // jquery入ってるか確認！
+    // $(function () {
+    //   alert('jQuery is ready.')
+    // });
+  </script>
 
 
 </body>
