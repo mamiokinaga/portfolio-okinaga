@@ -40,10 +40,77 @@ h1 picture .header__logo-sp{
   font-size: 16px;
   color: white;
   font-weight: 250;
+  padding: 8px 0;
 }
-.header_nav .gnavi li{
-  color: #2d2d2d;
+.header_nav_main-page li{
+  /* color: #2d2d2d; */
 }
+/*==================================================
+共通　横並びのための設定
+===================================*/
+
+.header_nav_works,
+.footer_nav ul{
+  display: flex;
+}
+
+.header_nav_works li a,
+.footer_nav ul li a{
+  display: block;
+  padding:5px 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header_nav_works li,
+.footer_nav ul li{
+  margin-bottom:20px;
+}
+
+/*==================================================
+　5-3-3 左から右に線が伸びる（下部）
+===================================*/
+.header_nav_works li a,
+.footer_nav ul li a,
+.header_nav_main-page a{
+  /*線の基点とするためrelativeを指定*/
+position: relative;
+}
+
+.header_nav_works li a:hover,
+.footer_nav ul li a:hover,
+.header_nav_main-page li a:hover{
+color:black;
+}
+.header_nav_main-page li a:hover{
+color:white;
+}
+
+.header_nav_works li a::after,
+.header_nav_main-page li a::after,
+.footer_nav ul li a::after{
+  content: ''; /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;/*線の形状*/
+  width: 80%;
+  height: 1px;
+  background:#2d2d2d; /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);/*X方向0、Y方向1*/
+  transform-origin: left top;/*左上基点*/
+}
+.header_nav_main-page li a::after{
+  background: white;
+}
+
+/*現在地とhoverの設定*/
+.header_nav_works li a:hover::after,
+.footer_nav ul li a:hover::after,
+.header_nav_main-page li a:hover::after{
+  transform: scale(1, 1);/*X方向にスケール拡大*/
+}
+
 /* ナビゲーションメニューの背景に色を付ける */
 header .change-color-point{
   position: absolute;
