@@ -55,15 +55,20 @@ h1 picture .header__logo-sp{
 }
 
 .header_nav_works li a,
-.footer_nav ul li a{
+.footer_nav ul li a,
+.header_nav_main-page a{
   display: block;
   padding:5px 5px;
   text-decoration: none;
   color: #333;
 }
+.header_nav_main-page a{
+  color: white;
+}
 
 .header_nav_works li,
-.footer_nav ul li{
+.footer_nav ul li,
+.header_nav_main-page li{
   margin-bottom:20px;
 }
 
@@ -96,7 +101,7 @@ color:white;
   width: 80%;
   height: 1px;
   background:#2d2d2d; /*アニメーションの指定*/
-  transition: all .3s;
+  transition: all .5s;
   transform: scale(0, 1);/*X方向0、Y方向1*/
   transform-origin: left top;/*左上基点*/
 }
@@ -110,6 +115,7 @@ color:white;
 .header_nav_main-page li a:hover::after{
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
+
 
 /* ナビゲーションメニューの背景に色を付ける */
 header .change-color-point{
