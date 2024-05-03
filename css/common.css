@@ -137,18 +137,15 @@ header .change-color{
 }
 header .change-color_works{
   background-color: white; 
-  opacity: 0.85;
+  opacity: 0.9;
   transition: 2s;
 }
-
 
 /* ハンバーガーメニュー */
 #header .hamburger,
 #header .header__nav-sp_wrapper .header_nav-sp{
   display: none;
 }
-
-
 
 /*ヘッダーナビ
 フッターナビ
@@ -184,7 +181,7 @@ footer h1 picture img{
   position: absolute;
   content: "";
   width: 32px;
-  height: 2px;
+  height: 1.5px;
   background-color: white;
   top: 16px;
   transition: 0.5s;
@@ -242,8 +239,6 @@ footer h1 picture img{
   background-color:rgba(255, 255, 255, 0.8);
   z-index: 110;
 }
-
-
 #header .header__nav-sp ul{
   display: flex;
   gap: 42px;
@@ -258,8 +253,6 @@ footer h1 picture img{
   z-index: 9999;
 }
 }
-
-
 
 /* ロゴ 共通部分 */
 /* #profile h3, */
