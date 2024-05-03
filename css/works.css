@@ -1,6 +1,6 @@
 @charset "utf-8";
 body{
-  padding-top: 120px;
+  /* padding-top: 120px; */
 }
 /* 共通 */
 #main-visual,
@@ -13,8 +13,8 @@ body{
 /* works ロゴ */
  h2{
   position: relative;
-  margin-top: 85px;
-  margin-bottom: 45px;
+  margin-top: 205px;
+  /* margin-bottom: 45px; */
 }
  h2 img{
   width: 266px;
