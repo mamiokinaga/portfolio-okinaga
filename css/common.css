@@ -30,12 +30,14 @@ h1 picture .header__logo-sp{
   z-index: 100;
 
 }
-.header_nav ul{
+
+#header .header_nav ul,
+.header_nav_works{
   display: flex;
   gap: 40px;
 }
 
-.header_nav ul li{
+#header .header_nav ul li{
   line-height: 1.5;
   font-size: 16px;
   color: white;
@@ -44,6 +46,9 @@ h1 picture .header__logo-sp{
 }
 .header_nav_main-page li{
   /* color: #2d2d2d; */
+}
+.header__nav-sp{
+  display: none;
 }
 /*==================================================
 共通　横並びのための設定
@@ -77,15 +82,16 @@ h1 picture .header__logo-sp{
 ===================================*/
 .header_nav_works li a,
 .footer_nav ul li a,
-.header_nav_main-page a{
-  /*線の基点とするためrelativeを指定*/
-position: relative;
+.header_nav_main-page a,
+.back-to-top_button a{
+position: relative;/*線の基点とするためrelativeを指定*/
 }
 
 .header_nav_works li a:hover,
 .footer_nav ul li a:hover,
-.header_nav_main-page li a:hover{
-color:black;
+.header_nav_main-page li a:hover,
+.back-to-top_button a:hover{
+color: #2d2d2d;
 }
 .header_nav_main-page li a:hover{
 color:white;
@@ -93,7 +99,8 @@ color:white;
 
 .header_nav_works li a::after,
 .header_nav_main-page li a::after,
-.footer_nav ul li a::after{
+.footer_nav ul li a::after,
+.back-to-top_button a::after{
   content: ''; /*絶対配置で線の位置を決める*/
   position: absolute;
   bottom: 0;
@@ -112,7 +119,8 @@ color:white;
 /*現在地とhoverの設定*/
 .header_nav_works li a:hover::after,
 .footer_nav ul li a:hover::after,
-.header_nav_main-page li a:hover::after{
+.header_nav_main-page li a:hover::after,
+.back-to-top_button a:hover::after{
   transform: scale(1, 1);/*X方向にスケール拡大*/
 }
 
@@ -136,7 +144,7 @@ header .change-color_works{
 
 /* ハンバーガーメニュー */
 #header .hamburger,
-#header .header_nav-sp{
+#header .header__nav-sp_wrapper .header_nav-sp{
   display: none;
 }
 
@@ -147,15 +155,20 @@ header .change-color_works{
 1100ｐｘ以下はここから読み込み
 共通 */
 @media screen and (max-width:1100px){
+header .change-color{
+  background-color: transparent;
+}
 header picture img,
 footer h1 picture img{
   width: 150px;
 }
 /* ハンバーガーメニュー */
-#header .header_nav{
+#header .header_nav,
+.header_nav_works{
   display: none;
 }
-#header .hamburger{
+#header .hamburger,
+#header .hamburger__works{
   display: block;
   width: 32px;
   height: 28px;
@@ -166,7 +179,8 @@ footer h1 picture img{
   transition: 0.5s;
   cursor: pointer;
 }
-#header .hamburger span{
+#header .hamburger span,
+#header .hamburger__works span{
   position: absolute;
   content: "";
   width: 32px;
@@ -175,7 +189,11 @@ footer h1 picture img{
   top: 16px;
   transition: 0.5s;
 }
-#header .hamburger span::before{
+#header .hamburger__works span{
+  background-color: #333;
+}
+#header .hamburger span::before,
+#header .hamburger__works span::before{
   position: absolute;
   content: "";
   width: 23px;
@@ -185,7 +203,11 @@ footer h1 picture img{
   bottom: -12px;
   transition: 0.5s;
 }
-#header .hamburger span::after{
+#header .hamburger__works span::before{
+  background-color: #333;
+}
+#header .hamburger span::after,
+#header .hamburger__works span::after{
   position: absolute;
   content: "";
   width: 32px;
@@ -195,18 +217,48 @@ footer h1 picture img{
   bottom: 12px;
   transition: 0.5s;
 }
+#header .hamburger__works span::after{
+  background-color: #333;
+}
 #header .open span{
   background-color: transparent;
 }
-.open span::before{
+#header .open span::before{
+  width: 32px;
   transform: rotate(45deg);
   top: 0;
 }
-.open span::after{
+#header .open span::after{
   transform: rotate(-45deg);
   bottom: 0;
 }
+#header .header__nav-sp_wrapper{
+  position: relative;
 }
+#header .header__nav-sp{
+  position: absolute;
+  width: 83%;
+  height: 100vh;
+  background-color:rgba(255, 255, 255, 0.8);
+  z-index: 110;
+}
+
+
+#header .header__nav-sp ul{
+  display: flex;
+  gap: 42px;
+  flex-direction: column;
+  align-items: start;
+  /* height: 100%; */
+  margin-top: 40%;
+  margin-left: 13%;
+}
+#header .header__nav-sp ul li{
+  font-size: 22px;
+  z-index: 9999;
+}
+}
+
 
 
 /* ロゴ 共通部分 */
@@ -241,10 +293,14 @@ h3 p{
 }
 
 
-  /* フッター */
+/* フッター */
 footer .back-to-top_button{
   text-align: right;
-  padding: 10% 25px 17% 0;
+  margin: 200px 3.5% 100px;
+  padding: 5px 5px;
+}
+footer .back-to-top_button a{
+  padding-bottom: 7px;
 }
 
 /* フッター　ナビゲーションメニュー */

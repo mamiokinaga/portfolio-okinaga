@@ -8,7 +8,7 @@
 
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/works.css">
   <link rel="stylesheet" href="../images/">
@@ -36,6 +36,7 @@
         h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
     })(document);
   </script>
+
   <!-- jquery読み込み -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -43,8 +44,7 @@
 
 <body>
   <!-- ヘッダー -->
-
-  <header>
+  <header id="header">
     <div class="header__inner">
       <!-- ヘッダーロゴ -->
       <h1>
@@ -64,6 +64,22 @@
           <li><a href="../index.html#works">Works</a></li>
           <li><a href="../index.html#special-thanks">Special Thanks</a></li>
           <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!--　ハンバーガーメニュー -->
+    <div class="hamburger__works">
+      <span></span>
+    </div>
+    <div class="header__nav-sp_wrapper">
+      <nav class="header__nav-sp">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#special-thanks">Special Thanks</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -180,18 +196,12 @@
           $('.header__inner').removeClass('change-color_works');
         }
       });
+      $(".hamburger__works").on("click", function () {
+        $(".header__nav-sp").fadeToggle();
+        $(".hamburger__works").toggleClass("open");
+      })
     });
 
-    // $(function () {
-    //   // $(".img-wrapper-burger").hide(3000);
-    //   $(".img-wrapper-burger").hide();
-    //   $(".img-wrapper-burger").show(1600);
-    // });
-    $(function () {
-      $(".hamburger").on("click", function () {
-        $(".hamburger").toggleClass("open");
-      });
-    });
   </script>
 
 

@@ -9,7 +9,7 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/common.css">
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- <link rel="stylesheet" href="../css/style.css"> -->
   <link rel="stylesheet" href="../css/works.css">
   <link rel="stylesheet" href="../images/">
 
@@ -44,8 +44,7 @@
 
 <body>
   <!-- ヘッダー -->
-
-  <header>
+  <header id="header">
     <div class="header__inner">
       <!-- ヘッダーロゴ -->
       <h1>
@@ -58,7 +57,7 @@
       </h1>
       <!--  ナビゲーションメニュー -->
       <nav class="header_nav">
-        <ul class="gnavi">
+        <ul class="header_nav_works">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#concept">Concept</a></li>
           <li><a href="../index.html#profile">Profile</a></li>
@@ -69,6 +68,22 @@
       </nav>
     </div>
   </header>
+  <!--　ハンバーガーメニュー -->
+  <div class="hamburger__works">
+    <span></span>
+  </div>
+  <div class="header__nav-sp_wrapper">
+    <nav class="header__nav-sp">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#special-thanks">Special Thanks</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
   <!-- works ロゴ -->
   <section id="main-visual">
     <h2><img src="../images/logo.png" alt="">
@@ -156,6 +171,21 @@
     // $(function () {
     //   alert('jQuery is ready.')
     // });
+
+    // ヘッダー背景に色を付ける
+    $(function () {
+      $(window).on('scroll', function () {
+        if ($('.change-color-point').height() < $(this).scrollTop()) {
+          $('.header__inner').addClass('change-color_works');
+        } else {
+          $('.header__inner').removeClass('change-color_works');
+        }
+      });
+      $(".hamburger__works").on("click", function () {
+        $(".header__nav-sp").fadeToggle();
+        $(".hamburger__works").toggleClass("open");
+      })
+    });
   </script>
 
 

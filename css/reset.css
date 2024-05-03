@@ -49,3 +49,14 @@ img {
     vertical-align: bottom;
     border: none;
 }
+.input-text, .input-email, .input-file, .input-submit {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

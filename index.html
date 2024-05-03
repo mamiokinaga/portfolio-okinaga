@@ -71,16 +71,18 @@
     <div class="hamburger">
       <span></span>
     </div>
-    <nav class="header_nav-sp">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#concept">Concept</a></li>
-        <li><a href="#profile">Profile</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#special-thanks">Special Thanks</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="header__nav-sp_wrapper">
+      <nav class="header__nav-sp">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#concept">Concept</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#special-thanks">Special Thanks</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
     <!--ナビゲーションメニューの背景に色を付ける  -->
     <div class="change-color-point"></div>
   </header>
@@ -156,25 +158,25 @@
         <a href="./works/sp-banner.html">
           <p class="works__spring-sale-banner"><img src="./images/spring-sale.jpg" alt=""></p>
         </a>
-        <p class="title"><a href="./works/sp-banner.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/sp-banner.html">WEB広告用バナーデザイン (架空)</a></p>
       </li>
       <li>
         <a href="./works/workers.html">
           <p class="works__item-workers"><img src="./images/workers-mockup@2x.png" alt=""></p>
         </a>
-        <p class="title"><a href="./works/workers.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/workers.html">WEB広告用バナーデザイン 模写(架空)</a></p>
       </li>
       <li>
         <a href="./works/trrip-banner.html">
           <p class="works__trip-banner"><img src="./images/trip.jpg" alt=""></p>
         </a>
-        <p class="title"><a href="./works/trrip-banner.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/trrip-banner.html">WEB広告用バナーデザイン 模写(架空)</a></p>
       </li>
       <li>
         <a href="./works/cafe.html">
           <p class="works__cafe"><img src="./images/design-cafe-mockup@2x.png" alt=""></p>
         </a>
-        <p class="title"><a href="./works/cafe.html">Hair Salon LP (架空)</a></p>
+        <p class="title"><a href="./works/cafe.html">CAFE WEBサイト　コーディング(架空)</a></p>
       </li>
     </ul>
   </section>
@@ -201,22 +203,19 @@
         </ul>
       </div>
     </div>
-
     <p class special-thanks_image>
       <picture>
         <source srcset="./images/special-thanks_sp@2x-100.jpg" media="(max-width: 767px)" sizes="150px">
         <img src="./images/specialthanks.jpg" alt="">
       </picture>
     </p>
-    </div>
   </section>
 
   <!-- フッター -->
   <footer>
     <div class="back-to-top_button">
-      <a href="index.html"><span></span>back to top</a>
+      <a href="index.html">back to top</a>
     </div>
-
     <div class="footer__inner">
       <!-- ヘッダーロゴ -->
       <h1>
@@ -239,7 +238,6 @@
         </ul>
         <div class="footer__sp-logo"><img src="./images/main-logo-sp.png" alt="ロゴ"></div>
       </nav>
-
     </div>
     <!-- フッター画像 -->
     <div class="footer__img">
@@ -248,9 +246,7 @@
         <source srcset="./images/footer_sp_1@2x-100.jpg" media="(max-width: 767px)">
         <img src="./images/footer@2x-100.jpg" alt="">
       </picture>
-
     </div>
-
   </footer>
   <script>
     AOS.init();
@@ -268,6 +264,10 @@
           $('.header__inner').removeClass('change-color');
         }
       });
+      $(".hamburger").on("click", function () {
+        $(".header__nav-sp").fadeToggle();
+        $(".hamburger").toggleClass("open");
+      })
     });
   </script>
 

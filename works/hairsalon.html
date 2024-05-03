@@ -58,7 +58,7 @@
       </h1>
       <!--  ナビゲーションメニュー -->
       <nav class="header_nav">
-        <ul class="gnavi">
+        <ul class="header_nav_works">
           <li><a href="../index.html">Home</a></li>
           <li><a href="../index.html#concept">Concept</a></li>
           <li><a href="../index.html#profile">Profile</a></li>
@@ -165,6 +165,21 @@
 
   <script>
     AOS.init();
+
+    // ヘッダー背景に色を付ける
+    $(function () {
+      $(window).on('scroll', function () {
+        if ($('.change-color-point').height() < $(this).scrollTop()) {
+          $('.header__inner').addClass('change-color_works');
+        } else {
+          $('.header__inner').removeClass('change-color_works');
+        }
+      });
+      $(".hamburger").on("click", function () {
+        $(".header__nav-sp").fadeToggle();
+        $(".hamburger").toggleClass("open");
+      })
+    });
   </script>
 
 
